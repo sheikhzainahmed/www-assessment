@@ -87,27 +87,28 @@
     .www-logo {
       display: flex;
       align-items: center;
-      gap: 12px;
-      margin-bottom: 40px;
+      gap: 18px;
+      margin-bottom: 36px;
       animation: fadeDown 0.5s ease both;
     }
 
     .www-logo-icon {
-      width: 44px; height: 44px;
-      border-radius: 12px;
+      width: 70px; height: 70px;
+      border-radius: 18px;
       background: linear-gradient(135deg, #0ea5e9, #0d9488);
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 20px;
-      box-shadow: 0 4px 20px rgba(14,165,233,0.35);
+      font-size: 34px;
+      box-shadow: 0 6px 28px rgba(14,165,233,0.4);
     }
 
     .www-logo-text {
       font-family: 'Outfit', sans-serif;
-      font-size: 18px;
-      font-weight: 700;
+      font-size: 32px;
+      font-weight: 800;
       color: var(--text-primary);
+      letter-spacing: -0.5px;
     }
 
     .www-logo-text span { color: var(--accent-primary); }
@@ -953,10 +954,10 @@
     <div class="www-logo-text">World Wide <span>Waves</span></div>
   </div>
 
-  <div class="badge"><span class="badge-dot"></span> Candidate Assessment Portal</div>
+  <div class="badge"><span class="badge-dot"></span> Skills Assessment Test</div>
 
-  <h1 class="hero-title">Cold Caller<br><span class="gradient-text">Skills Assessment</span></h1>
-  <p class="hero-subtitle">A comprehensive evaluation designed by World Wide Waves to find the best talent. Answer honestly — we value authenticity over perfection.</p>
+  <h1 class="hero-title">Think You've Got<br><span class="gradient-text">What It Takes?</span></h1>
+  <p class="hero-subtitle">World Wide Waves is looking for the perfect cold caller. This short assessment helps us find the right fit &mdash; for both of us. No trick questions, no fluff. Just show us who you are.</p>
 
   <div class="info-cards">
     <div class="info-card">
@@ -964,7 +965,7 @@
       <div class="ic-label">Questions</div>
     </div>
     <div class="info-card">
-      <div class="ic-num">30<span style="font-size:16px">min</span></div>
+      <div class="ic-num">15<span style="font-size:16px">min</span></div>
       <div class="ic-label">Est. Time</div>
     </div>
     <div class="info-card">
@@ -978,8 +979,8 @@
   </div>
 
   <div class="candidate-form">
-    <h3>Before you begin</h3>
-    <p>Please enter your details below. Find a quiet space — the test is timed at 30 minutes.</p>
+    <h3>Ready to stand out?</h3>
+    <p>Fill in your details and carve out 15 uninterrupted minutes. This is your chance to make a great first impression.</p>
     <div class="form-row">
       <div class="form-group">
         <label for="inp-fname">First Name</label>
@@ -1032,7 +1033,7 @@
     </div>
     <div class="timer-badge" id="timer-badge">
       <svg width="13" height="13" fill="none" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/><path stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M12 7v5l3 3"/></svg>
-      <span id="timer-text">30:00</span>
+      <span id="timer-text">15:00</span>
     </div>
   </div>
 
@@ -1158,7 +1159,7 @@ const SUPABASE_URL     = 'https://kwxipzlcwbflmqarjxav.supabase.co';       // e.
 const SUPABASE_ANON_KEY = 'sb_publishable_I8QS-INMJF0cMUEGVM1TlQ_7XRZlcJc'; // your anon/public key
 
 /* ─── Admin password ─── */
-const ADMIN_PASSWORD = 'admin123'; // ⚠️ Change before going live!
+const ADMIN_PASSWORD = 'admin981'; // ⚠️ Change before going live!
 
 /* ═══════════════════════════════════════════════════════
    QUESTIONS
@@ -1439,7 +1440,7 @@ function findQuestion(qid) {
    TIMER
 ═══════════════════════════════════════════════════════ */
 function startTimer() {
-  secondsLeft = 30 * 60;
+  secondsLeft = 15 * 60;
   clearInterval(timerInterval);
   timerInterval = setInterval(() => {
     secondsLeft--;
